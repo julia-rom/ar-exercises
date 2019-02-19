@@ -8,3 +8,16 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+@stores = Store.all
+@total = 0
+
+@stores.each do |store|
+  @total += store.annual_revenue
+end
+
+@avg = @total/Store.count
+puts "Total Revenue: #{@total}"
+puts "Average revenue: #{@avg}"
+
+@rich_stores = Store.where('annual_revenue < 1000000').count
+puts @rich_stores
