@@ -10,3 +10,6 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+@store5 = Store.create(name: '', annual_revenue: '', mens_apparel: true, womens_apparel: false )
+puts @store5.inspect
